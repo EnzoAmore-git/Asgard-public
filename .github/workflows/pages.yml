@@ -25,6 +25,10 @@ jobs:
           mkdir _site
           cp index.html style.css script.js content.js favicon.svg _site/
           cp -R assets _site/assets
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Асгард — переходим на новый адрес</title><link rel="canonical" href="https://asgardapp.ru/"><meta http-equiv="refresh" content="0;url=https://asgardapp.ru/"><script>location.replace('https://asgardapp.ru/'+location.search+location.hash);</script></head><body><p>Сайт переехал: <a href="https://asgardapp.ru/">открыть Асгард</a>.</p></body></html>
+          HTML
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
