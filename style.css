@@ -14,3 +14,14 @@
 
 /* Supplied Asgard emblem, preserved at its original aspect ratio. */
 .brand img{object-fit:contain;flex-shrink:0}.header .brand img{width:44px;height:48px}.footer .brand img{width:36px;height:40px}@media(min-width:700px){.header .brand img{width:56px;height:60px}}
+
+/* Stage labels stay visible independently of the selected roadmap tab. */
+.roadmap-status{display:inline-flex;align-items:center;gap:7px;max-width:100%;padding:6px 10px;border:1px solid transparent;border-radius:5px;font-size:12px;font-weight:700;line-height:1.4;text-align:left;letter-spacing:0}
+.roadmap-status:before{content:'';width:7px;height:7px;flex:none;border-radius:50%;background:currentColor}
+.roadmap-status.is-current{background:#d9eafa;color:#173d66;border-color:#a5c9ec}
+.roadmap-status.is-future{background:#35151f;color:#f2e7e7;border-color:#bfa5ac}
+.roadmap-tab{min-height:220px;display:flex;flex-direction:column;align-items:flex-start}
+.roadmap-tab .index{margin-bottom:12px}
+.roadmap-tab .roadmap-status{margin-bottom:16px}
+.roadmap-tab strong{margin-top:0}
+.roadmap-detail .roadmap-status{margin-bottom:18px}
